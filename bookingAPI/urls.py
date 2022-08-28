@@ -22,9 +22,9 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Hitmen Challenge",
+      title="BOOKING API",
       default_version='v1',
-      description="Hitmen Challenge",
+      description="BOOKING API",
       contact=openapi.Contact(email="areg_4@hotmail.com"),
       license=openapi.License(name="BSD License"),
    ),

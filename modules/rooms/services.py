@@ -38,7 +38,8 @@ def delete_room(room_id:int) -> dict:
         if not room:
             return fail_response("Room not found", status.HTTP_404_NOT_FOUND)
         if room_has_events(room_id):
-            return fail_response("Room can't be delete because has events availables")
+            return fail_response("Room can't be delete because it has events availables", 
+                                 status.HTTP_400_BAD_REQUEST)
         room.delete()
         return success_response("Room was deleted!", status.HTTP_204_NO_CONTENT)
     except Exception as e:
