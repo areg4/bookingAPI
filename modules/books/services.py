@@ -12,7 +12,7 @@ def create_book(data) -> dict:
         serializer = BooksSerializer(data=data)
         if not serializer.is_valid():
             return fail_response("Fail to make a Book", 
-                                 status.HTTP_201_CREATED, serializer.errors)
+                                 status.HTTP_400_BAD_REQUEST, serializer.errors)
         book = Books.objects.create(**serializer.validated_data)
         serializer = BooksSerializer(book)
         return success_response("Book created!", status.HTTP_201_CREATED, serializer.data)
