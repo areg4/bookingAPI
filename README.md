@@ -5,7 +5,7 @@ BOOKINGAPI for technical Interview
 
 ## Summary
 
-API REST to book a space for a event.
+API REST to book a space for an event.
 
 
 ## Features 
